@@ -221,6 +221,15 @@ alias gll="git ll"
 alias glll="git filelog"
 alias grc="gh repo clone"
 alias grl="gh repo list --source --no-archived --limit 1000"
+
+# The compdef lines below are defined by the completion system, so it has to be
+# initialised first. This file is sourced from the end of ~/.zshrc, where a
+# local compinit may already have run - only initialise if it has not, since a
+# second compinit is just wasted startup time.
+if ! (( $+functions[compdef] )); then
+  autoload -Uz compinit && compinit
+fi
+
 compdef _git gs=git-status
 compdef _git gsd=git-status
 compdef _git gp=git-pull
