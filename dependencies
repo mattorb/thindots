@@ -1,1 +1,2 @@
-fzf tmux rg gh
+# Install with local dependency manager of choice for .gitaliases and bin/ tools to work well
+fzf tmux rg gh claude codex opencode antigravity hermes droid
